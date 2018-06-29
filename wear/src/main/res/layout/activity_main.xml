@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:boxedEdges="all">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/hour_8"
+            android:layout_width="@dimen/led_width"
+            android:layout_height="@dimen/led_height"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/title"
+            android:src="@drawable/led_20" />
+
+        <ImageView
+            android:id="@+id/hour_4"
+            android:layout_width="@dimen/led_width"
+            android:layout_height="@dimen/led_height"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/hour_8"
+            android:src="@drawable/led_20" />
+
+        <ImageView
+            android:id="@+id/hour_2"
+            android:layout_width="@dimen/led_width"
+            android:layout_height="@dimen/led_height"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/hour_4"
+            android:src="@drawable/led_20" />
+
+
+        <ImageView
+            android:id="@+id/hour_1"
+            android:layout_width="@dimen/led_width"
+            android:layout_height="@dimen/led_height"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/hour_2"
+            android:src="@drawable/led_20" />
+
+        <TextView
+            android:id="@+id/day_am"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/title"
+            android:gravity="center"
+            android:text="AM"
+            android:textColor="@color/orange"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/day_pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/day_am"
+            android:gravity="center"
+            android:text="PM"
+            android:textColor="@color/grey"
+            android:textSize="10sp" />
+
+        <!-- 秒 -->
+        <ImageView
+            android:id="@+id/second"
+            android:layout_width="@dimen/led_width"
+            android:layout_height="@dimen/led_height"
+            android:layout_centerInParent="true"
+            android:src="@drawable/led_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/hour_1"
+            android:layout_centerInParent="true"
+            android:gravity="bottom"
+            android:weightSum="6">
+
+            <ImageView
+                android:id="@+id/minutes_1"
+                android:layout_width="@dimen/led_width"
+                android:layout_height="@dimen/led_height"
+                android:layout_weight="1"
+                android:src="@drawable/led_20" />
+
+            <ImageView
+                android:id="@+id/minutes_2"
+                android:layout_width="@dimen/led_width"
+                android:layout_height="@dimen/led_height"
+                android:layout_weight="1"
+                android:src="@drawable/led_20" />
+
+            <ImageView
+                android:id="@+id/minutes_4"
+                android:layout_width="@dimen/led_width"
+                android:layout_height="@dimen/led_height"
+                android:layout_weight="1"
+                android:src="@drawable/led_20" />
+
+            <ImageView
+                android:id="@+id/minutes_8"
+                android:layout_width="@dimen/led_width"
+                android:layout_height="@dimen/led_height"
+                android:layout_weight="1"
+                android:src="@drawable/led_20" />
+
+            <ImageView
+                android:id="@+id/minutes_16"
+                android:layout_width="@dimen/led_width"
+                android:layout_height="@dimen/led_height"
+                android:layout_weight="1"
+                android:src="@drawable/led_20" />
+
+            <ImageView
+                android:id="@+id/minutes_32"
+                android:layout_width="@dimen/led_width"
+                android:layout_height="@dimen/led_height"
+                android:layout_weight="1"
+                android:src="@drawable/led_20" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</android.support.wear.widget.BoxInsetLayout>
